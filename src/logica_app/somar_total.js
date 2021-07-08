@@ -18,10 +18,9 @@ function somarTotal() {
         }
     }
 
-    console.log(total.toFixed(2))
+    subtotal = total;
 
     if (total < 250) {
-        subtotal = total;
         total = itens * 10 + subtotal
     }
 
@@ -33,7 +32,6 @@ function somarTotal() {
     let resultado_format = 'R$  ' + parseFloat(total).toFixed(2).replace('.', ',')
 
     secao.innerText = resultado_format;
-    console.log(secao_subtotal)
     secao_subtotal.innerText = subtotal_format;
     
 }
