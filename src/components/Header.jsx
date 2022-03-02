@@ -1,27 +1,29 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 
+function HeaderSite() {
+  return (
+    <header className="header-s">
+      <Link className="logo" to="/">
+        Loja Arretada
+      </Link>
 
-function Header() {
-
-    return(
-        <header id='header'>
-
-            <a id='logo' href='/'>Loja Arretada</a>
-            
-            <nav id='nav'>
-
-                <ul id='menu'>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/carrinho'>Carrinho</a></li>
-                </ul>
-
-
-            </nav>
-
-        </header>
-
-    )
-
+      <nav className="nav-s">
+        <ul className="menu">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/cart">
+              <img
+                src="../../public/assets/cart-icon.svg"
+                alt="Ícone do carrinho"
+              />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
-export default Header;
+export default HeaderSite;
