@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/components/header-s.css";
 
 function HeaderSite() {
   return (
@@ -10,11 +11,12 @@ function HeaderSite() {
       <nav className="nav-s">
         <ul className="menu">
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
             <Link to="/cart">
-              <img src="./assets/cart-icon.svg" alt="Ícone do carrinho" />
+              <img
+                src="./assets/cart-icon.svg"
+                alt="Ícone do carrinho"
+                className="icon-cart"
+              />
             </Link>
           </li>
         </ul>
