@@ -14,10 +14,7 @@ function HeaderSite() {
           </li>
           <li>
             <Link to="/cart">
-              <img
-                src="../../public/assets/cart-icon.svg"
-                alt="Ícone do carrinho"
-              />
+              <img src="./assets/cart-icon.svg" alt="Ícone do carrinho" />
             </Link>
           </li>
         </ul>

@@ -1,15 +1,13 @@
-import React from 'react';
-import Header from '../../components/Header';
-import Main from '../../components/Main'
-import Footer from '../../components/Footer';
+import MainSite from "../../components/MainSite";
+import Footer from "../../components/Footer";
+import HeaderSite from "../../components/HeaderSite";
 
-function Home() {
-    return(
-        <div>
-            <Header />
-            <Main />
-            <Footer />
-        </div>
-    ) }
-
-export default Home;
+export default function Home() {
+  return (
+    <div>
+      <HeaderSite />
+      <MainSite />
+      <Footer />
+    </div>
+  );
+}

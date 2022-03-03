@@ -1,7 +1,6 @@
-import React from "react";
 import Footer from "../../components/Footer";
 import MainCompra from "../../components/MainCompraFinalizada";
-import Header from "../../components/Header";
+import Header from "../../components/HeaderSite";
 
 function CheckOut() {
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-import Header from "../../components/Header";
+import Header from "../../components/HeaderSite";
 import MainCarrinho from "../../components/MainCarrinho";
 
 function Cart() {

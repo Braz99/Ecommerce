@@ -1,8 +1,6 @@
-import "./App.css";
-import Routes from "./routes";
+import SiteRoutes from "./siteRoutes";
+import React from "react";
 
-function App() {
-  return <Routes />;
+export default function App() {
+  return <SiteRoutes />;
 }
-
-export default App;
