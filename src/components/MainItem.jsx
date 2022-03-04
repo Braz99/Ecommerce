@@ -31,7 +31,7 @@ export default function MainItem({ children, cartList }) {
   }
   return (
     <li className="game">
-      <h2 className="game-name">{children.name}</h2>
+      <h3 className="game-name">{children.name}</h3>
       <h3 className="game-score">Score: {children.score}</h3>
 
       <img

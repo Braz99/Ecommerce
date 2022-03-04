@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CartItem from "./CartItem";
+import "../styles/components/cartMain-s.css";
 
 export default function CartMain({ showCart }) {
   let [cart, setCart] = useState(
