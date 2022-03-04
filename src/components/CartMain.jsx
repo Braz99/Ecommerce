@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-
 import somarTotal from "../logica_app/somar_total";
-import verificar from "../logica_app/verificar_vazio";
 import CartItem from "./CartItem";
+import TotalPrice from "./TotalPrice";
 
 export default function CartMain() {
-  useEffect(() => somarTotal());
-
   let [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) ?? []
   );
@@ -29,22 +26,7 @@ export default function CartMain() {
         ))}
       </ul>
 
-      <div className="total">
-        <h3>
-          Total sem frete: <span className="subtotal"> R$ 0,00 </span>
-        </h3>
-        <h2>
-          Total dos produtos: <span className="total"> R$ 0,00</span>
-        </h2>
-
-        <button
-          onClick={() => {
-            verificar();
-          }}
-        >
-          Finalizar compra
-        </button>
-      </div>
+      <TotalPrice cart={cart} />
     </main>
   );
 }
