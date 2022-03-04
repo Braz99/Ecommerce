@@ -1,11 +1,11 @@
+import CartMain from "../../components/CartMain";
 import Header from "../../components/HeaderSite";
-import MainCarrinho from "../../components/MainCarrinho";
 
 function Cart() {
   return (
     <div>
       <Header />
-      <MainCarrinho />
+      <CartMain />
     </div>
   );
 }

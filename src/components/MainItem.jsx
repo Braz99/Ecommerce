@@ -7,7 +7,7 @@ export default function MainItem({ children, cartList }) {
     let item = {
       id: game.id,
       name: game.name,
-      imagem: game.image,
+      image: game.image,
       score: game.score,
       price: parseFloat(game.price),
       quantity: 1,
