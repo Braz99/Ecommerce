@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
-import somarTotal from "../logica_app/somar_total";
+import React, { useState } from "react";
 import CartItem from "./CartItem";
-import TotalPrice from "./TotalPrice";
 
-export default function CartMain() {
+export default function CartMain({ showCart }) {
   let [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) ?? []
   );
 
   return (
-    <main>
-      <div className="arrow-back">
+    <div>
+      <div className="arrow-back" onClick={() => showCart()}>
         <img
           src="assets/arrow-down-icon.svg"
           alt="arrow back"
@@ -25,8 +23,6 @@ export default function CartMain() {
           </CartItem>
         ))}
       </ul>
-
-      <TotalPrice cart={cart} />
-    </main>
+    </div>
   );
 }

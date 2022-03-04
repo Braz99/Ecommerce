@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/components/header-s.css";
 
-function HeaderSite() {
+function HeaderSite({ showCart }) {
   return (
     <header className="header-s">
       <Link className="logo" to="/">
@@ -10,14 +10,12 @@ function HeaderSite() {
 
       <nav className="nav-s">
         <ul className="menu">
-          <li>
-            <Link to="/cart">
-              <img
-                src="./assets/cart-icon.svg"
-                alt="Ícone do carrinho"
-                className="icon-cart"
-              />
-            </Link>
+          <li onClick={() => showCart()}>
+            <img
+              src="./assets/cart-icon.svg"
+              alt="Ícone do carrinho"
+              className="icon-cart"
+            />
           </li>
         </ul>
       </nav>

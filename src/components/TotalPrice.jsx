@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export default function TotalPrice({ cart }) {
+export default function TotalPrice() {
   let [total, setTotal] = useState(0.0);
   let [ship, setShip] = useState(0.0);
   let navigate = useNavigate();
+  let cart = JSON.parse(localStorage.getItem("cart"));
 
   useEffect(() => {
     let priceItems = cart.reduce((a, b) => a + b.price, 0);
@@ -37,11 +38,17 @@ export default function TotalPrice({ cart }) {
     <div className="total-price">
       <h3>
         Total sem frete:{" "}
-        <span className="subtotal"> R$ {total.toFixed(2)}</span>
+        <span className="subtotal">
+          {" "}
+          R$ {total.toFixed(2).replace(".", ",")}
+        </span>
       </h3>
       <h2>
         Total dos produtos:{" "}
-        <span className="total"> R$ {(total + ship).toFixed(2)}</span>
+        <span className="total">
+          {" "}
+          R$ {(total + ship).toFixed(2).replace(".", ",")}
+        </span>
       </h2>
 
       <button onClick={() => handleRedirect()}>Finalizar compra</button>
