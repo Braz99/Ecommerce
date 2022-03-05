@@ -51,7 +51,7 @@ export default function CartItem({ children, cartList }) {
   }
 
   return (
-    <li>
+    <li className="cart-game">
       <h2 className="cart-game-name">{children.name}</h2>
 
       <img
@@ -61,7 +61,7 @@ export default function CartItem({ children, cartList }) {
       />
 
       <h3 className="cart-game-price">
-        {children.price.toFixed(2).replace(".", ",")}
+        R$ {children.price.toFixed(2).replace(".", ",")}
       </h3>
 
       <div className="order">
@@ -72,7 +72,7 @@ export default function CartItem({ children, cartList }) {
           Comprar
         </button>
 
-        <h3 className="cart-game-quantity">R$ {children.quantity}</h3>
+        <h3 className="cart-game-quantity"> {children.quantity}</h3>
 
         <button
           className="cart-button-decrease"
@@ -82,7 +82,12 @@ export default function CartItem({ children, cartList }) {
         </button>
       </div>
 
-      <button onClick={() => handleRemove(children.id)}>Retmover</button>
+      <button
+        className="cart-button-remove"
+        onClick={() => handleRemove(children.id)}
+      >
+        Remover
+      </button>
     </li>
   );
 }

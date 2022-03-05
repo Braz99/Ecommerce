@@ -6,7 +6,7 @@ export default function TotalPrice() {
   let [total, setTotal] = useState(0.0);
   let [ship, setShip] = useState(0.0);
   let navigate = useNavigate();
-  let cart = JSON.parse(localStorage.getItem("cart"));
+  let cart = JSON.parse(localStorage.getItem("cart")) ?? [];
 
   useEffect(() => {
     let priceItems = cart.reduce((a, b) => a + b.price, 0);

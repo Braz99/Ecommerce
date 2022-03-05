@@ -1,166 +1,37 @@
-
-
-
-
-
 #footer {
-    bottom: 0;
-    width: 100%;
-    position: relative;
-    background-color: rgb(255, 0, 0);
-    color: #fff;
-    text-align: center;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  text-align: center;
 }
-
-#main, #main_carrinho, #main_compra {
-    min-height: calc(100vh - 40px - 46px);
-}
-
-#filtro {
-    width: 300px;
-    font-size: 20px;
-    border-radius: 10px;
-    text-align: center;
-    align-self: flex-end;
-    margin-right:  40px;
-    padding-left: 40px;
-}
-
-
 
 /* ---------------Carrinho----------- */
 
-.lista_carrinho {
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.lista_carrinho h3, h4 {
-    width: 40%;}
-
-.lista_carrinho button {
-    width: 80px;
-    min-width: 80px;
-    height: 80px;
-    background-color: rgb(255, 0, 0);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-
-#area_carrinho {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0px 20px 0px 20px;
-    min-width: 150px;
-    margin-bottom: 1000px;
-}
-
-
-#secao_preco {
-    display: flex;
-    justify-content: space-around;
-    background-color:rgb(255, 0, 0);
-    color:#fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    padding: 20px;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#secao_preco button {
-    width: 40%;
-    font-size: 20px;
-    min-width: 100px;
-    padding: 10px;
-    background-color: #000;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-
-}
-
-#secao_preco h2, h3 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 /* -------------Seção finalizada ----------------- */
 #secao_finalizada {
-    background-color: #fff;
-    color:rgb(255, 0, 0);
-    font-size: 20px;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+  background-color: #fff;
+  color: rgb(255, 0, 0);
+  font-size: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 #secao_finalizada button {
-    width: 40%;
-    font-size: 20px;
-    min-width: 100px;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #000;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  width: 40%;
+  font-size: 20px;
+  min-width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
 /* --------------------Media Queries----------- */
-
-@media (max-width: 700px) {
-
-    #main ul li {
-        background-color: #fff;
-        border-radius: 10px;
-        text-align: center;
-        min-height: 400px;}
-
-    #main ul {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        flex-wrap: wrap;
-    }
-
-     #menu {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 20px;
-        margin-right: 10px;
-        justify-content: center;
-    }
-
-    #filtro {
-        margin-right: 20px;
-        width: 200px;
-    }
-
-    #area_carrinho {
-        margin-bottom: 360px;
-    }
-
-    .lista_carrinho {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .lista_carrinho h3, h4 {
-        width: 100%;}
-
-}
