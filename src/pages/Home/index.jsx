@@ -1,10 +1,9 @@
+import { useState } from "react";
 import MainSite from "../../components/MainSite";
-import Footer from "../../components/Footer";
 import HeaderSite from "../../components/HeaderSite";
 import CartMain from "../../components/CartMain";
-import TotalPrice from "../../components/TotalPrice";
+import FooterSite from "../../components/FooterSite";
 import "../../styles/components/area.css";
-import { useState } from "react";
 
 export default function Home() {
   let [show, setShow] = useState(false);
@@ -24,7 +23,7 @@ export default function Home() {
       <div className={`${show ? "area-main" : ""}`}>
         <HeaderSite showCart={showCart} />
         <MainSite />
-        <Footer />
+        <FooterSite />
       </div>
     </>
   );
