@@ -1,5 +1,6 @@
 .main-s {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -9,11 +10,13 @@
   justify-content: flex-end;
   padding: 10px;
 }
+
 .select-filter {
   width: 25%;
   padding: 5px;
   font-size: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .select-filter:focus {
@@ -31,8 +34,8 @@
   background-color: #fff;
   margin: 20px;
   width: 25%;
+  max-width: 400px;
   min-width: 200px;
-  max-width: 500px;
   border-radius: 10px;
   text-align: center;
   min-height: 400px;
@@ -40,8 +43,8 @@
 }
 
 .game:hover {
-  transform: translate(0px, -30px);
-  box-shadow: 0px 5px 40px;
+  transform: translate(0px, -20px);
+  box-shadow: 0px 0px 5px;
   transition: 0.5s;
 }
 
@@ -78,4 +81,28 @@
   color: #fff;
   margin: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .game {
+    min-width: 250px;
+    margin: 20px 10px;
+  }
+
+  .select-filter {
+    width: 50%;
+  }
+}
+
+
+
+@media (max-width: 350px) {
+  .game {
+    min-width: 215px;
+    margin: 20px 5px;
+  }
+
+  .select-filter {
+    width: 70%;
+  }
 }
