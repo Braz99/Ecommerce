@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import "../styles/components/totalPrice.css";
 
 export default function TotalPrice() {
   let [total, setTotal] = useState(0.0);
@@ -51,7 +52,7 @@ export default function TotalPrice() {
         </span>
       </h2>
 
-      <button onClick={() => handleRedirect()}>Finalizar compra</button>
+      <button className='total-button' onClick={() => handleRedirect()} >Finalizar compra</button>
     </div>
   );
 }

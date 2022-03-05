@@ -1,0 +1,33 @@
+.total-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 100%;
+  box-shadow: 0px 0px 1px;
+  margin-top: 1px;
+  height: calc(100vh - 512px);
+}
+
+.total,
+.subtotal {
+  color: #ff0000;
+}
+
+.total-price h2,
+h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.total-button {
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1041e0;
+  margin-top: 10px;
+  cursor: pointer;
+}

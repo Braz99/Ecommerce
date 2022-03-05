@@ -12,7 +12,7 @@ export default function MainSite() {
 
   let [cart, setCart] = useState(cartData ? cartData : []);
 
-  useEffect(() => setData(db), []);
+  useEffect(() => setData([...db]), []);
 
   return (
     <main className="main-s">
