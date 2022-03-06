@@ -137,7 +137,7 @@
   }
 
   .cart-s {
-    height: calc(100vh - 210px);
+    height: calc(100vh - 260px);
     margin: 0px;
   }
 
@@ -182,7 +182,13 @@
   }
 }
 
-@media (max-height: 670px) {
+@media (max-height: 770px) {
+  .cart-s {
+    height: calc(100vh - 195px);
+  }
+}
+
+@media (min-height: 840px) {
   .cart-s {
     height: calc(100vh - 195px);
   }
