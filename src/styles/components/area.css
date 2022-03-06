@@ -12,3 +12,9 @@
   height: 100vh;
   overflow-y: hidden;
 }
+
+@media (max-width: 450px) {
+  .area-main {
+    height: 90vh;
+  }
+}
