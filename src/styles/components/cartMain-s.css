@@ -46,10 +46,11 @@
 .cart-game {
   width: 70%;
   max-width: 350px;
+  max-height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 0px 30px 30px 0px;
   border-radius: 10px;
   box-shadow: 0px 0px 2px;
 }
@@ -125,6 +126,9 @@
   .cart-section {
     width: 80%;
   }
+  .cart-game {
+    margin: 0px 0px 30px 0px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -133,7 +137,7 @@
   }
 
   .cart-s {
-    height: calc(100vh - 235px);
+    height: calc(100vh - 210px);
     margin: 0px;
   }
 
@@ -180,6 +184,6 @@
 
 @media (max-height: 670px) {
   .cart-s {
-    height: calc(100vh - 227px);
+    height: calc(100vh - 195px);
   }
 }
