@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import { useCart } from "../provider/CartProvider";
 import CartItem from "./CartItem";
 import "../styles/components/cartMain-s.css";
 import TotalPrice from "./TotalPrice";
 
 export default function CartMain({ showCart }) {
-  let [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) ?? []
-  );
+  let [cart] = useCart();
 
   return (
     <div className="cart-section">
@@ -20,9 +18,7 @@ export default function CartMain({ showCart }) {
 
       <ul className="cart-s">
         {cart.map((game, i) => (
-          <CartItem key={i} cartList={{ cart, setCart }}>
-            {game}
-          </CartItem>
+          <CartItem key={i}>{game}</CartItem>
         ))}
       </ul>
 

@@ -1,54 +1,7 @@
-import { toast } from "react-toastify";
+import useCartActions from "../hooks/useCartActions";
 
-export default function CartItem({ children, cartList }) {
-  let { cart, setCart } = cartList;
-
-  function handleIncrease(id) {
-    let found = cart.find((item) => item.id === id);
-    let unitPrice = found.price / found.quantity;
-
-    found.quantity += 1;
-    found.price += unitPrice;
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    setCart([...cart]);
-  }
-
-  function handleDecrease(id) {
-    let found = cart.find((item) => item.id === id);
-    let unitPrice = found.price / found.quantity;
-
-    if (found.quantity > 0) {
-      found.quantity -= 1;
-      found.price -= unitPrice;
-      setCart([...cart]);
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
-
-    if (found.quantity === 0) {
-      let newCart = cart.filter((item) => item.id !== id);
-
-      localStorage.setItem("cart", JSON.stringify(newCart));
-
-      setCart([...newCart]);
-
-      toast.error("Item removido(a) do carrinho", {
-        autoClose: 2000,
-      });
-    }
-  }
-
-  function handleRemove(id) {
-    let newCart = cart.filter((item) => item.id !== id);
-
-    localStorage.setItem("cart", JSON.stringify(newCart));
-
-    setCart([...newCart]);
-
-    toast.error("Item removido(a) do carrinho", {
-      autoClose: 2000,
-    });
-  }
+export default function CartItem({ children }) {
+  let { handleIncrease, handleDecrease, handleRemove } = useCartActions();
 
   return (
     <li className="cart-game">

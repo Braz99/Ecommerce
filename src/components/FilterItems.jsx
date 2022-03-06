@@ -1,37 +1,4 @@
-export default function FilterItems({ dataBase }) {
-  let { data, setData, db } = dataBase;
-  function handleFilter(e) {
-    let selectedOption = e.target.value;
-
-    if (selectedOption === "default") {
-      setData([...db]);
-    }
-
-    if (selectedOption === "price") {
-      data.sort(function (a, b) {
-        if (a.price < b.price) {
-          return -1;
-        } else {
-          return true;
-        }
-      });
-
-      setData([...data]);
-    }
-
-    if (selectedOption === "score") {
-      data.sort(function (a, b) {
-        if (a.score < b.score) {
-          return -1;
-        } else {
-          return true;
-        }
-      });
-
-      setData([...data]);
-    }
-  }
-
+export default function FilterItems({ handleFilter }) {
   return (
     <div className="filter">
       <select className="select-filter" onChange={(e) => handleFilter(e)}>

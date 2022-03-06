@@ -1,26 +1,18 @@
-import { useState, useEffect } from "react";
 import FilterItems from "./FilterItems";
 import MainItem from "./MainItem";
 import "../styles/components/mainSite-s.css";
+import useMainActions from "../hooks/useMainActios";
 
 export default function MainSite() {
-  let db = require("../api/products.json");
-
-  let [data, setData] = useState([]);
-
-  let cartData = JSON.parse(localStorage.getItem("cart"));
-
-  let [cart, setCart] = useState(cartData ? cartData : []);
-
-  useEffect(() => setData([...db]), []);
+  let { handleBuy, data, setData, db, handleFilter } = useMainActions();
 
   return (
     <main className="main-s">
-      <FilterItems dataBase={{ data, setData, db }} />
+      <FilterItems handleFilter={handleFilter} />
 
       <ul className="game-list">
         {data.map((game, i) => (
-          <MainItem key={i} cartList={{ cart, setCart }}>
+          <MainItem key={i} handleBuy={handleBuy}>
             {game}
           </MainItem>
         ))}
