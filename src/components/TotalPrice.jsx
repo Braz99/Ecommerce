@@ -3,7 +3,7 @@ import "../styles/components/totalPrice.css";
 
 export default function TotalPrice() {
   let { total, ship, handleRedirect } = useTotalActions();
-  
+
   return (
     <div className="total-price">
       <h3>

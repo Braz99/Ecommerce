@@ -71,5 +71,5 @@ export default function useMainActions() {
     }
   }
 
-  return { handleFilter, handleBuy, data, setData, db };
+  return { handleFilter, handleBuy, data };
 }

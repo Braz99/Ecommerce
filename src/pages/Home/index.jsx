@@ -1,8 +1,8 @@
 import { useState } from "react";
 import MainSite from "../../components/MainSite";
 import HeaderSite from "../../components/HeaderSite";
-import CartMain from "../../components/CartMain";
 import FooterSite from "../../components/FooterSite";
+import CartSection from "../../components/CartSection";
 import "../../styles/components/area.css";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     <>
       {show ? (
         <div className="area-cart">
-          <CartMain showCart={showCart} />
+          <CartSection showCart={showCart} />
         </div>
       ) : (
         false

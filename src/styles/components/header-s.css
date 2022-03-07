@@ -39,6 +39,7 @@
   transform: translate(-22px, -1px);
   background-color: #fff;
   border-radius: 50%;
+  user-select: none;
 }
 
 .logo {

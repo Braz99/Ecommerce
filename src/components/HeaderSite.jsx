@@ -13,11 +13,12 @@ function HeaderSite({ showCart }) {
 
       <nav className="nav-s">
         <ul className="menu">
-          <li onClick={() => showCart()}>
+          <li>
             <img
               src="./assets/cart-icon.svg"
               alt="Ícone do carrinho"
               className="icon-cart"
+              onClick={() => showCart()}
             />
             <span className="total-items">{totalItems}</span>
           </li>
