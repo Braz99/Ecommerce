@@ -19,10 +19,26 @@
   justify-content: space-around;
 }
 
+.menu li {
+  display: flex;
+}
+
 .icon-cart {
   width: 55px;
   height: 55px;
   cursor: pointer;
+}
+
+.total-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  transform: translate(-22px, -1px);
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .logo {
@@ -33,12 +49,18 @@
 @media (max-width: 450px) {
   .header-s {
     font-size: 20px;
-    padding: 10px 15px;
+    padding: 10px;
   }
 
   .icon-cart {
     width: 45px;
     height: 45px;
+  }
+
+  .total-items {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
   }
 
   .logo {
