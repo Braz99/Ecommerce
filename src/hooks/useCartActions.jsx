@@ -4,6 +4,9 @@ import { useCart } from "../provider/CartProvider";
 export default function useCartActions() {
   let [cart, setCart] = useCart();
 
+  const saveStore = (data) =>
+    localStorage.setItem("cart", JSON.stringify([...data]));
+
   function handleIncrease(id) {
     let found = cart.find((item) => item.id === id);
 
@@ -15,7 +18,7 @@ export default function useCartActions() {
 
     setCart([...cart]);
 
-    localStorage.setItem("cart", JSON.stringify([...cart]));
+    saveStore(cart);
   }
 
   function handleDecrease(id) {
@@ -30,7 +33,7 @@ export default function useCartActions() {
 
       setCart([...cart]);
 
-      localStorage.setItem("cart", JSON.stringify([...cart]));
+      saveStore(cart);
     }
 
     if (found.quantity === 0) {
@@ -38,7 +41,7 @@ export default function useCartActions() {
 
       setCart([...newCart]);
 
-      localStorage.setItem("cart", JSON.stringify([...newCart]));
+      saveStore(newCart);
 
       toast.error("Item removido(a) do carrinho", {
         autoClose: 2000,
@@ -51,7 +54,7 @@ export default function useCartActions() {
 
     setCart([...newCart]);
 
-    localStorage.setItem("cart", JSON.stringify([...newCart]));
+    saveStore(newCart);
 
     toast.error("Item removido(a) do carrinho", {
       autoClose: 2000,
