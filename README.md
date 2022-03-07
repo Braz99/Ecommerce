@@ -1,5 +1,12 @@
 # Ecommerce
- Tecnologia: React
+
+Site : [Link do Projeto](https://game-store-fb.netlify.app/)
+
+
+/// Abaixo é a documentação da versão Antiga - Em breve atualizarei....
+
+-------
+Tecnologia: React
  
  Projeto que simula um ecommerce de games. Você consegue selecionar um produto, colocá-lo no carrinho, e finalizar a compra. Utilizei para isso o React + LocalStorage.
  
