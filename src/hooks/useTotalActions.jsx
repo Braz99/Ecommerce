@@ -28,7 +28,7 @@ export default function useTotalActions() {
       setCart([]);
       navigate("/checkout");
     } else {
-      toast.error("Compre algo primeiro!", {
+      toast.warning("Compre algo primeiro!", {
         position: "top-center",
         autoClose: 2500,
         toastId: 1,

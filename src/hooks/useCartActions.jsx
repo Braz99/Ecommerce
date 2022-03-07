@@ -43,7 +43,7 @@ export default function useCartActions() {
 
       saveStore(newCart);
 
-      toast.error("Item removido(a) do carrinho", {
+      toast.error("Item removido do carrinho", {
         autoClose: 2000,
       });
     }
@@ -56,7 +56,7 @@ export default function useCartActions() {
 
     saveStore(newCart);
 
-    toast.error("Item removido(a) do carrinho", {
+    toast.error("Item removido do carrinho", {
       autoClose: 2000,
     });
   }

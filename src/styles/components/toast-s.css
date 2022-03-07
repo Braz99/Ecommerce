@@ -1,0 +1,11 @@
+@media (max-width: 450px) {
+  .toast-s {
+    width: 70%;
+    font-size: 15px;
+  }
+
+  .Toastify__toast {
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+}
