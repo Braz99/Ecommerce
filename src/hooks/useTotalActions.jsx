@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useCart } from "../provider/CartProvider";
 
 export default function useTotalActions() {
   let [total, setTotal] = useState(0.0);
   let [ship, setShip] = useState(0.0);
-  let [cart] = useCart();
+  let [cart, setCart] = useCart();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -20,10 +21,11 @@ export default function useTotalActions() {
       setShip(shipItems * 10.0);
     }
   }, [cart]);
-  
 
   function handleRedirect() {
     if (cart.length > 0) {
+      localStorage.clear();
+      setCart([]);
       navigate("/checkout");
     } else {
       toast.error("Compre algo primeiro!", {

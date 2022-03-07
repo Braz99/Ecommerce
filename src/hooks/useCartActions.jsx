@@ -25,7 +25,9 @@ export default function useCartActions() {
 
     if (found.quantity > 0) {
       found.quantity -= 1;
+
       found.price -= unitPrice;
+
       setCart([...cart]);
 
       localStorage.setItem("cart", JSON.stringify([...cart]));
@@ -35,6 +37,7 @@ export default function useCartActions() {
       let newCart = cart.filter((item) => item.id !== id);
 
       setCart([...newCart]);
+
       localStorage.setItem("cart", JSON.stringify([...newCart]));
 
       toast.error("Item removido(a) do carrinho", {
