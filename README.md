@@ -1,10 +1,10 @@
 # Game Store
-#### Link do projeto: [Site](https://game-store-fb.netlify.app/)
+### Link do projeto: [Site](https://game-store-fb.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45247886-24a7-480a-ac78-d92b37a41266/deploy-status)](https://game-store-fb.netlify.app/)
 
 
-## Menu
+### Menu
 [Sobre](#sobre) | [Instalação](#instalação) | [Regras](#regras-do-negócio) | [Estrutura](#estrutura-do-projeto) | [Informações](#informações) | [Componentes](#componentes) | [Autor](#autor) | [Licença](#licença)
 
 ## Sobre
@@ -29,7 +29,7 @@ E também de um editor de código, de preferência o [VSCode](https://code.visua
 
  O servidor inciará na porta:3000 - acesse http://localhost:3000
  
- ### Regras do Negócio
+ ## Regras do Negócio
 - Os valores exibidos no checkout (frete, subtotal e total) são calculados dinamicamente
 - O usuário pode adicionar e remover produtos do carrinho
 - O usuário pode ordenar os produtos por preço, score e ordem alfabética(filtro padrão)
