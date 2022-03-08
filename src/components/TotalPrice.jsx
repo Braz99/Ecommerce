@@ -7,16 +7,14 @@ export default function TotalPrice() {
   return (
     <div className="total-price">
       <h3>
-        Total sem frete:{" "}
+        Total sem frete:
         <span className="subtotal">
-          {" "}
           R$ {total.toFixed(2).replace(".", ",")}
         </span>
       </h3>
       <h2>
-        Total dos produtos:{" "}
+        Total dos produtos:
         <span className="total">
-          {" "}
           R$ {(total + ship).toFixed(2).replace(".", ",")}
         </span>
       </h2>

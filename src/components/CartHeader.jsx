@@ -1,6 +1,6 @@
 import useTotalItems from "../hooks/useTotalItems";
 
-export default function HCartHeader(props) {
+export default function CartHeader(props) {
   let totalItems = useTotalItems();
   return (
     <div className="arrow-back">
