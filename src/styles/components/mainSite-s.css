@@ -24,21 +24,19 @@
 }
 
 .game-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  padding: 15px;
 }
 
 .game {
   background-color: #fff;
-  margin: 20px;
-  width: 25%;
-  max-width: 400px;
-  min-width: 200px;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
-  min-height: 400px;
   padding: 0px 0px 20px 0px;
 }
 
@@ -69,6 +67,8 @@
 
 .game-image {
   margin: 10px;
+  width: 180px;
+  height: 180px;
 }
 
 .game-button {
@@ -83,10 +83,16 @@
   cursor: pointer;
 }
 
+@media (min-width: 1250px) {
+  .game-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
 @media (max-width: 750px) {
-  .game {
-    min-width: 250px;
-    margin: 20px 10px;
+  .game-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .select-filter {
@@ -94,15 +100,19 @@
   }
 }
 
-
-
-@media (max-width: 350px) {
-  .game {
-    min-width: 215px;
-    margin: 20px 5px;
+@media (max-width: 450px) {
+  .game-list {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 15px 40px;
   }
 
   .select-filter {
     width: 70%;
+  }
+}
+
+@media (max-width: 300px) {
+  .game-list {
+    padding: 15px 25px;
   }
 }
